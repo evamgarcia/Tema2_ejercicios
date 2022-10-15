@@ -11,4 +11,16 @@
 # True
 
 def modificar(lista):
-    lista = sorted(lista, reverse = True)
+    lista = list(set(lista))
+    lista.sort(reverse = True)
+    lista2 = []
+    for elemento in lista:
+        if elemento % 2 == 0:
+            lista2.append(elemento)
+    suma = sum(lista2)
+    lista2.insert(0, suma)
+    return lista2
+    
+lista = [2, 4, 5, 65, 83, 23]
+nueva_lista = modificar(lista)
+print(nueva_lista[0] == sum(nueva_lista[1:]))
