@@ -12,9 +12,9 @@
 
 def modificar(lista):
     lista = list(set(lista))
-    lista.sort(reverse = True)
+    lista2 = lista.sort(reverse = True)
     lista2 = []
-    for elemento in lista:
+    for elemento in lista2:
         if elemento % 2 == 0:
             lista2.append(elemento)
     suma = sum(lista2)
